@@ -1,3 +1,4 @@
+@echo off
 cd C:\Users\MR.MA\maxioul.github.io\bolg
 set yyyy=%date:~,4%
 set mm=%date:~5,2%
