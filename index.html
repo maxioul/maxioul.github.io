@@ -66,6 +66,66 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2020-09-30" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/30/2020-09-30/" class="article-date">
+  <time datetime="2020-09-29T23:51:39.000Z" itemprop="datePublished">2020-09-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/30/2020-09-30/">2020-09-30</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="9-Palindrome-Number"><a href="#9-Palindrome-Number" class="headerlink" title="9. Palindrome Number"></a>9. Palindrome Number</h4><h5 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h5><p>按着顺序看一遍前面还有那些没做的，结束了之后开始看看CS 97SI。</p>
+<p>判断int 是否回文，有int to string 的函数吗</p>
+<p>好耶！c++11伟大。</p>
+<p>(009)[<a href="https://leetcode.com/problems/palindrome-number/submissions/]" target="_blank" rel="noopener">https://leetcode.com/problems/palindrome-number/submissions/]</a><br>(My Code)[<a href="https://github.com/maxioul/leetcode_practice/blob/master/009.cpp]" target="_blank" rel="noopener">https://github.com/maxioul/leetcode_practice/blob/master/009.cpp]</a></p>
+<h4 id="19-Remove-Nth-Node-From-End-of-List"><a href="#19-Remove-Nth-Node-From-End-of-List" class="headerlink" title="19. Remove Nth Node From End of List"></a>19. Remove Nth Node From End of List</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>Double pointers, EZ.</p>
+<p>啊啊啊啊啊，指针好难。</p>
+<p>一开始忽视了head 节点自己被除掉的边界情况。</p>
+<p>(019)[<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/]" target="_blank" rel="noopener">https://leetcode.com/problems/remove-nth-node-from-end-of-list/]</a><br>(My Code)[<a href="https://github.com/maxioul/leetcode_practice/blob/master/019.cpp]" target="_blank" rel="noopener">https://github.com/maxioul/leetcode_practice/blob/master/019.cpp]</a></p>
+<h4 id="21-Merge-Two-Sorted-Lists"><a href="#21-Merge-Two-Sorted-Lists" class="headerlink" title="21. Merge Two Sorted Lists"></a>21. Merge Two Sorted Lists</h4><h5 id="Easy-1"><a href="#Easy-1" class="headerlink" title="Easy"></a>Easy</h5><p>把两个有序列表合并，感觉可以在一个列表上加另一个列表，不需要创建新列表。</p>
+<p>搞定了，有点trick 的地方是要保存被插入列表的两个相邻节点，因为只会有从被抛弃列表往被插入列表的插入。</p>
+<p>(021)[<a href="https://leetcode.com/problems/merge-two-sorted-lists/]" target="_blank" rel="noopener">https://leetcode.com/problems/merge-two-sorted-lists/]</a><br>(My Code)[<a href="https://github.com/maxioul/leetcode_practice/blob/master/021.cpp]" target="_blank" rel="noopener">https://github.com/maxioul/leetcode_practice/blob/master/021.cpp]</a></p>
+<h4 id="23-Merge-k-Sorted-Lists"><a href="#23-Merge-k-Sorted-Lists" class="headerlink" title="23. Merge k Sorted Lists"></a>23. Merge k Sorted Lists</h4><h5 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h5><p>把多个有序列表合并，好像还是可以用刚刚一样的方法，就是判断最小值的时候会麻烦一点？</p>
+<p>vector 的移除操作是O(N)，好烦啊，想直接把空指针从vector 里面移除掉，就感觉这操作开销太大。</p>
+<p>不如交换变成空的节点与最后一个有值的节点，保存当前有值的节点数目，然后每一次比较的小循环也可以小一点。</p>
+<p>之前打算每选出一个最小节点之后就做一次最小值对比，后来想想每次有n个值要对比，但是新出现的值只有一个，每次都要O(N),开销太大。</p>
+<p>这个时候用最小堆是最好的，可是我懒得写。</p>
+<p>不过最小堆就不用担心空指针的问题了，啊啊啊啊啊啊。</p>
+<p>好耶，c++ STL 有heap。</p>
+<p>哇，仔细一看这个题好妙啊，vector 里面放list ，vector 就像是好几个滑动窗口在list 上滑动。我甚至可以直接在这个vector上面实现一个heap。</p>
+<p>但是为什么要给自己找事儿呢。</p>
+<p>STL 的堆实现只是算法，不是实体的数据结构。不过倒是显得vector 更加好用了。妙啊。</p>
+<p><a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank" rel="noopener">023</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/023.cpp" target="_blank" rel="noopener">My Code</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/09/30/2020-09-30/" data-id="ckfoxvdvj0077qkuykjkr7cjt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-2020-09-29" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/29/2020-09-29/" class="article-date">
@@ -99,7 +159,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/29/2020-09-29/" data-id="ckfo7femg009ln0uy1cwsrv3y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/29/2020-09-29/" data-id="ckfoxvdvm007cqkuyp84z9bvz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
@@ -140,7 +200,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/27/Year-Awards-of-2020/" data-id="ckfo7femk009sn0uyk435a6zr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/27/Year-Awards-of-2020/" data-id="ckfoxvdvg0070qkuy2og7mre3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Year-Awards/">Year Awards</a></li></ul>
@@ -187,7 +247,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/27/2020-09-27/" data-id="ckfo7femo009zn0uybxh150a9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/27/2020-09-27/" data-id="ckfoxvdvi0074qkuynou7vb56" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -238,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/25/2020-09-25/" data-id="ckfo7feml009un0uy72qgednl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/25/2020-09-25/" data-id="ckfoxvdvf006xqkuyspaugokb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
@@ -285,7 +345,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/24/2020-09-24/" data-id="ckfo7femd009gn0uy00fr8qj9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/24/2020-09-24/" data-id="ckfoxvdvn007eqkuy68s63v0y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
@@ -326,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/23/2020-09-23/" data-id="ckfo7femi009nn0uyexfj0byh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/23/2020-09-23/" data-id="ckfoxvdve006vqkuy4k9653xi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
@@ -365,7 +425,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/05/2020-09-05/" data-id="ckfo7femp00a2n0uy1z9xy6ki" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/05/2020-09-05/" data-id="ckfoxvdvl0079qkuyhstrtz31" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -408,7 +468,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/21/2020-08-20/" data-id="ckfo7fema009an0uygy562vs0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/21/2020-08-20/" data-id="ckfoxvdva006nqkuywia4t1c3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -455,52 +515,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/19/2020-08-19/" data-id="ckfo7femb009cn0uyfj8lda8j" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-08-17" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/17/2020-08-17/" class="article-date">
-  <time datetime="2020-08-17T14:34:20.000Z" itemprop="datePublished">2020-08-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/17/2020-08-17/">2020-08-17</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>这一赛季的LOL比赛告一段落了，IG输的好惨。看看Faker　今年能走多远吧。</p>
-<h4 id="五件感谢的事情"><a href="#五件感谢的事情" class="headerlink" title="五件感谢的事情"></a>五件感谢的事情</h4><ol>
-<li>不得不说，跟ff14 的朋友们聊天真的很轻松。谢谢他们，虽然我没时间再去玩儿这个游戏了。</li>
-<li>怪猎也好玩儿，特别是打败了很强的怪物的时候。感谢制作组把这么好玩儿的游戏带到了这里。</li>
-<li>最近又在刷一遍Tal 教授的积极心理学，感觉又有新收获，又或者说之前看第一遍的时候有遗漏，感谢教授带来的课程吧，今天看视频的时候经常会想，如果大学的自己看到的话，真的会有很多不一样的事情发生，所以这一次一定要坚持下去啊。</li>
-<li>谢谢便利店，买到了想喝的饮料。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/17/2020-08-17/" data-id="ckfo7femc009en0uyj1s8jvm7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/08/19/2020-08-19/" data-id="ckfoxvdv9006lqkuyaooeertq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -516,7 +531,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -562,6 +577,10 @@
       <ul>
         
           <li>
+            <a href="/2020/09/30/2020-09-30/">2020-09-30</a>
+          </li>
+        
+          <li>
             <a href="/2020/09/29/2020-09-29/">2020-09-29</a>
           </li>
         
@@ -575,10 +594,6 @@
         
           <li>
             <a href="/2020/09/25/2020-09-25/">2020-09-25</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/24/2020-09-24/">2020-09-24</a>
           </li>
         
       </ul>
