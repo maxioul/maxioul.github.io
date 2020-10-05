@@ -66,6 +66,116 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2020-10-05" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/05/2020-10-05/" class="article-date">
+  <time datetime="2020-10-05T06:01:21.000Z" itemprop="datePublished">2020-10-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/05/2020-10-05/">2020-10-05</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>今天中午知道我好朋友父亲离世了。</p>
+<p>中午去研究室坐了两小时，跟两个同级的日本人一句话没说。</p>
+<p>觉得有点孤独吧，去罗森买了一个炸鸡两个布丁。</p>
+<p>吃完了，看到好朋友家里的猫猫也病重了。</p>
+<p>好难过啊。表弟最近在流片，也没啥时间。</p>
+<p>一个人好难受啊。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/05/2020-10-05/" data-id="ckfw4s8ik00799guyeu948air" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020-10-04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/04/2020-10-04/" class="article-date">
+  <time datetime="2020-10-04T02:48:28.000Z" itemprop="datePublished">2020-10-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/04/2020-10-04/">2020-10-04</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><p>上午刷知乎看到一个人三月份开始刷leetcode， 现在已经500题了，而我现在才可怜的120道题。看来坚持真的很重要。</p>
+<p>我也要每天都刷题了。每天三道题吧。</p>
+<h4 id="29-Divide-Two-Integers"><a href="#29-Divide-Two-Integers" class="headerlink" title="29. Divide Two Integers"></a>29. Divide Two Integers</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>为啥这题只有16%的通过啊，我感觉看着挺简单的。</p>
+<p>想了想，直接除有个越界的条件，或许可以用INT_MAX和INT_MIN除以除数来判断被除数的大小范围，被除数超过了范围就输出越界。</p>
+<p>噢，原来是用INT_MAX来乘以被除数来定边界。</p>
+<p>噢，做错了，题目要求说只接受32位的运算环境。</p>
+<p>这咋办，要是想用这种办法来的话，可以试试用乘以2的次方来试探在不在范围内。</p>
+<p>先没收一下符号吧，好像没收不得，负数范围比正数大一。</p>
+<p>不过越界是不是只有INT_MIN除以-1这种情况。毕竟都是整数，越除只会越小。</p>
+<p>靠，还真是，一通操作猛如虎，结果就检测一种情况就可以了。</p>
+<p>不过为什么别人的答案全是位运算啊。</p>
+<p>噢，合着不能用除法啊。</p>
+<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊，又没有好好看题。</p>
+<p>看了答案之后有一个问题，为什么用了long int，INT_MIN就不会越界，C++的long int 不也是32位的吗。</p>
+<p>我觉得用unsigned int 也可以，果然可以。</p>
+<p><a href="https://leetcode.com/problems/divide-two-integers/" target="_blank" rel="noopener">029</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/029.cpp" target="_blank" rel="noopener">My Code</a></p>
+<h4 id="37-Sudoku-Solver"><a href="#37-Sudoku-Solver" class="headerlink" title="37. Sudoku Solver"></a>37. Sudoku Solver</h4><h5 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h5><p>我以前就在想写一个数独解答器，没想到啊，早就有人想到了。</p>
+<p>啊，这，我还以为会有什么条件限制或者hit，就硬解啊。</p>
+<p>暴力解法就不停的遍历没有答案的位置填空直到没有空可以填。</p>
+<p>但是数独不是有难一点的吗，感觉难一点的数独用这种方法会失败。</p>
+<p>先试试咯，这道题通过率居然有40%。</p>
+<p>暴力直接超时了。如果用DFS倒是可以得到所有的解吧，但是规模会不会太大了。假设有60个空位，就是60^9的计算量。</p>
+<p>试试DFS吧。</p>
+<p>居然错了，啊，这，答案是错的是我没想到的。</p>
+<p>没有把修改过的值修改回’.’，所以错了，修改了之后超时。</p>
+<p>发现是在栈空之后，理论上这个状态是错误的应该返回上一级，但是没有返回导致死循环。</p>
+<p>最后写出来挺慢的，看看别的答案吧。</p>
+<p><a href="https://leetcode.com/problems/sudoku-solver/" target="_blank" rel="noopener">037</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/037.cpp" target="_blank" rel="noopener">My Code</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/04/2020-10-04/" data-id="ckfw4s8in007i9guyb6v2dzc7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-2020-10-02" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/02/2020-10-02/" class="article-date">
@@ -102,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/10/02/2020-10-02/" data-id="ckfrycx5b007lh4uyowo2jgyd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/10/02/2020-10-02/" data-id="ckfw4s8ih00709guy59502ub1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/今日观影/">今日观影</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -145,7 +255,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/10/01/2020-10-01/" data-id="ckfrycx5i0084h4uyp6w5u9x3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/10/01/2020-10-01/" data-id="ckfw4s8ip007n9guy3c6gvc42" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
@@ -216,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/30/2020-09-30/" data-id="ckfrycx57007gh4uycgwkal5r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/30/2020-09-30/" data-id="ckfw4s8ig006x9guyv0hptmws" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/今日观影/">今日观影</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
@@ -261,7 +371,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/29/2020-09-29/" data-id="ckfrycx5i0082h4uy9eis3q16" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/29/2020-09-29/" data-id="ckfw4s8io007k9guy7zfx0gz1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
@@ -302,7 +412,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/27/Year-Awards-of-2020/" data-id="ckfrycx5g007xh4uyn5zc23al" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/27/Year-Awards-of-2020/" data-id="ckfw4s8il007b9guympefhejq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Year-Awards/">Year Awards</a></li></ul>
@@ -349,7 +459,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/27/2020-09-27/" data-id="ckfrycx5f007th4uy3j98w862" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/27/2020-09-27/" data-id="ckfw4s8il007d9guyrmdxfseo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
@@ -400,7 +510,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/25/2020-09-25/" data-id="ckfrycx5h0080h4uyxxw20h2n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/25/2020-09-25/" data-id="ckfw4s8ij00779guyywy95dmc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
@@ -447,90 +557,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/24/2020-09-24/" data-id="ckfrycx5d007ph4uyljbilo3i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/24/2020-09-24/" data-id="ckfw4s8ih00729guy1ktksttu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-09-23" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/23/2020-09-23/" class="article-date">
-  <time datetime="2020-09-23T08:30:41.000Z" itemprop="datePublished">2020-09-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/23/2020-09-23/">2020-09-23</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="093-Resrore-IP-Addresses"><a href="#093-Resrore-IP-Addresses" class="headerlink" title="093 Resrore IP Addresses"></a>093 Resrore IP Addresses</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>IP 地址有四段，每一段都可以从0~255，一共需要放三个点在string 中，检测每一段是不是合法的代码应该可以复用，考虑写成函数。</p>
-<p>解题挺顺利，遇到了两个边际问题没有考虑到，一个是数字不可以0开头，第二个是太长越界，通过Test 函数里面加了两个判断解决。</p>
-<p><a href="https://leetcode.com/problems/restore-ip-addresses/" target="_blank" rel="noopener">093</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/093.cpp" target="_blank" rel="noopener">My code</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/23/2020-09-23/" data-id="ckfrycx5e007rh4uy7ee5bfm9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-09-05" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/05/2020-09-05/" class="article-date">
-  <time datetime="2020-09-05T08:29:32.000Z" itemprop="datePublished">2020-09-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/05/2020-09-05/">2020-09-05</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>今天体验到了什么叫来自朋友的压力，买了个琴在群里抱怨了两句按格子太痛，被皮卡追着问我要学啥。。。。压力太大了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/05/2020-09-05/" data-id="ckfrycx5c007nh4uyol31uu4r" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
 
     </footer>
   </div>
@@ -589,6 +619,14 @@
       <ul>
         
           <li>
+            <a href="/2020/10/05/2020-10-05/">2020-10-05</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/04/2020-10-04/">2020-10-04</a>
+          </li>
+        
+          <li>
             <a href="/2020/10/02/2020-10-02/">2020-10-02</a>
           </li>
         
@@ -598,14 +636,6 @@
         
           <li>
             <a href="/2020/09/30/2020-09-30/">2020-09-30</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/29/2020-09-29/">2020-09-29</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/27/Year-Awards-of-2020/">Year_Awards_of_2020</a>
           </li>
         
       </ul>
