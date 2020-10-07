@@ -5,20 +5,20 @@
   
 
   
-  <title>2018-09-13 | Maxiou！</title>
+  <title>2020-10-07 | Maxiou！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="杂记下午有一段时间觉得很空虚，就像是大三时候的那种感觉，一度怀疑是抑郁卷土重来。可能是因为饿了或者困了吧。 我现在在想到底应该用一个正常人的标准来要求自己，还是按照一个病人的标准，做好一件事情算一件事情呢。之前刚离职的时候的那种脆弱的感觉已经渐渐过去了，到底是因为这一次过去了，还是说只是因为最近没有压力呢。">
-<meta name="keywords" content="2018,杂记">
+  <meta name="description" content="刷题记录47. Permutations IIMedium想了想确实是46 的代码加一行相同的就不交换就OK, 自己再写一遍吧。 完了，有点忘了边界条件，一开始要怎么做，需要把每个点都不动的时候进一下循环吗。 好像不需要来着？只需要把原来的push 一次就好了？ 出错了。 好像没有理解到之前的题是怎么做的。 nice，做出来了，我的方法是维护一个在这个位置被交换过的元素的表格，如果被交换过了一次，">
+<meta name="keywords" content="2020,刷题记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018-09-13">
-<meta property="og:url" content="http://yoursite.com/2018/09/13/2018-09-13/index.html">
+<meta property="og:title" content="2020-10-07">
+<meta property="og:url" content="http://yoursite.com/2020/10/07/2020-10-07/index.html">
 <meta property="og:site_name" content="Maxiou！">
-<meta property="og:description" content="杂记下午有一段时间觉得很空虚，就像是大三时候的那种感觉，一度怀疑是抑郁卷土重来。可能是因为饿了或者困了吧。 我现在在想到底应该用一个正常人的标准来要求自己，还是按照一个病人的标准，做好一件事情算一件事情呢。之前刚离职的时候的那种脆弱的感觉已经渐渐过去了，到底是因为这一次过去了，还是说只是因为最近没有压力呢。">
+<meta property="og:description" content="刷题记录47. Permutations IIMedium想了想确实是46 的代码加一行相同的就不交换就OK, 自己再写一遍吧。 完了，有点忘了边界条件，一开始要怎么做，需要把每个点都不动的时候进一下循环吗。 好像不需要来着？只需要把原来的push 一次就好了？ 出错了。 好像没有理解到之前的题是怎么做的。 nice，做出来了，我的方法是维护一个在这个位置被交换过的元素的表格，如果被交换过了一次，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-13T15:56:15.446Z">
+<meta property="og:updated_time" content="2020-10-07T04:01:43.984Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2018-09-13">
-<meta name="twitter:description" content="杂记下午有一段时间觉得很空虚，就像是大三时候的那种感觉，一度怀疑是抑郁卷土重来。可能是因为饿了或者困了吧。 我现在在想到底应该用一个正常人的标准来要求自己，还是按照一个病人的标准，做好一件事情算一件事情呢。之前刚离职的时候的那种脆弱的感觉已经渐渐过去了，到底是因为这一次过去了，还是说只是因为最近没有压力呢。">
+<meta name="twitter:title" content="2020-10-07">
+<meta name="twitter:description" content="刷题记录47. Permutations IIMedium想了想确实是46 的代码加一行相同的就不交换就OK, 自己再写一遍吧。 完了，有点忘了边界条件，一开始要怎么做，需要把每个点都不动的时候进一下循环吗。 好像不需要来着？只需要把原来的push 一次就好了？ 出错了。 好像没有理解到之前的题是怎么做的。 nice，做出来了，我的方法是维护一个在这个位置被交换过的元素的表格，如果被交换过了一次，">
   
     <link rel="alternate" href="/atom.xml" title="Maxiou！" type="application/atom+xml">
   
@@ -69,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-2018-09-13" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-2020-10-07" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/09/13/2018-09-13/" class="article-date">
-  <time datetime="2018-09-13T14:27:54.000Z" itemprop="datePublished">2018-09-13</time>
+    <a href="/2020/10/07/2020-10-07/" class="article-date">
+  <time datetime="2020-10-07T02:28:30.000Z" itemprop="datePublished">2020-10-07</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      2018-09-13
+      2020-10-07
     </h1>
   
 
@@ -91,16 +91,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h2><p>下午有一段时间觉得很空虚，就像是大三时候的那种感觉，一度怀疑是抑郁卷土重来。可能是因为饿了或者困了吧。</p>
-<p>我现在在想到底应该用一个正常人的标准来要求自己，还是按照一个病人的标准，做好一件事情算一件事情呢。之前刚离职的时候的那种脆弱的感觉已经渐渐过去了，到底是因为这一次过去了，还是说只是因为最近没有压力呢。</p>
+        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="47-Permutations-II"><a href="#47-Permutations-II" class="headerlink" title="47. Permutations II"></a>47. Permutations II</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>想了想确实是46 的代码加一行相同的就不交换就OK, 自己再写一遍吧。</p>
+<p>完了，有点忘了边界条件，一开始要怎么做，需要把每个点都不动的时候进一下循环吗。</p>
+<p>好像不需要来着？只需要把原来的push 一次就好了？</p>
+<p>出错了。</p>
+<p>好像没有理解到之前的题是怎么做的。</p>
+<p>nice，做出来了，我的方法是维护一个在这个位置被交换过的元素的表格，如果被交换过了一次，就不再交换。</p>
+<p><a href="https://leetcode.com/problems/permutations-ii/" target="_blank" rel="noopener">047</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/047.cpp" target="_blank" rel="noopener">My Code</a></p>
+<h4 id="50-Pow-x-n"><a href="#50-Pow-x-n" class="headerlink" title="50. Pow(x, n)"></a>50. Pow(x, n)</h4><h5 id="Medium-1"><a href="#Medium-1" class="headerlink" title="Medium"></a>Medium</h5><p>EZ,每次乘数不足的时候就倍增乘数。</p>
+<p><a href="https://leetcode.com/problems/powx-n/" target="_blank" rel="noopener">050</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/050.cpp" target="_blank" rel="noopener">My Code</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/13/2018-09-13/" data-id="ckfyv8klb002wjcuy30xdkfgs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/10/07/2020-10-07/" data-id="ckfyv8knq008bjcuydi5hqk61" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2018/">2018</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
 
     </footer>
   </div>
@@ -108,19 +115,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/09/14/2018-09-14/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          2018-09-14
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/09/12/2018-09-12/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/10/06/2020-10-06/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">2018-09-12</div>
+      <div class="article-nav-title">2020-10-06</div>
     </a>
   
 </nav>
