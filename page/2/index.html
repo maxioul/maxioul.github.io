@@ -66,6 +66,480 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2020-10-10" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/10/2020-10-10/" class="article-date">
+  <time datetime="2020-10-10T04:19:52.000Z" itemprop="datePublished">2020-10-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/10/2020-10-10/">2020-10-10</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="51-N-Queens"><a href="#51-N-Queens" class="headerlink" title="51. N-Queens"></a>51. N-Queens</h4><h5 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h5><p>也是回溯搜索，把棋子分别投影到x，x+y，x-y三个方向的vector上面储存当前位置是否被别人吃到。</p>
+<p>然后沿着y++的方向搜索。</p>
+<p><a href="https://leetcode.com/problems/n-queens/" target="_blank" rel="noopener">051</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/051.cpp" target="_blank" rel="noopener">My Code</a></p>
+<h4 id="52-N-Queens-II"><a href="#52-N-Queens-II" class="headerlink" title="52. N-Queens II"></a>52. N-Queens II</h4><h5 id="Hard-1"><a href="#Hard-1" class="headerlink" title="Hard"></a>Hard</h5><p>同样的问题，这一次的输出只需要个数，感觉一个一个搜索会比较慢，应该是有数学上的解法的。</p>
+<p>好吧，并没有，只要稍微改一改前面的代码就OK了。</p>
+<p>那就很奇怪了，我看跑的最快的代码应该没有我的快呀。他还用了for循环在每一次搜索里面。</p>
+<p>是不是vector 的resize 太花时间了。我看答案里面直接是10*10的size。</p>
+<p>果然，用了固定长度的数组储存之后时间就100%了。</p>
+<p><a href="https://leetcode.com/problems/n-queens-ii/" target="_blank" rel="noopener">052</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/052.cpp" target="_blank" rel="noopener">My Code</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/10/2020-10-10/" data-id="ckhuo1x7z008owcuy0pbnbu8g" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020-10-07" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/07/2020-10-07/" class="article-date">
+  <time datetime="2020-10-07T02:28:30.000Z" itemprop="datePublished">2020-10-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/07/2020-10-07/">2020-10-07</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="47-Permutations-II"><a href="#47-Permutations-II" class="headerlink" title="47. Permutations II"></a>47. Permutations II</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>想了想确实是46 的代码加一行相同的就不交换就OK, 自己再写一遍吧。</p>
+<p>完了，有点忘了边界条件，一开始要怎么做，需要把每个点都不动的时候进一下循环吗。</p>
+<p>好像不需要来着？只需要把原来的push 一次就好了？</p>
+<p>出错了。</p>
+<p>好像没有理解到之前的题是怎么做的。</p>
+<p>nice，做出来了，我的方法是维护一个在这个位置被交换过的元素的表格，如果被交换过了一次，就不再交换。</p>
+<p><a href="https://leetcode.com/problems/permutations-ii/" target="_blank" rel="noopener">047</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/047.cpp" target="_blank" rel="noopener">My Code</a></p>
+<h4 id="50-Pow-x-n"><a href="#50-Pow-x-n" class="headerlink" title="50. Pow(x, n)"></a>50. Pow(x, n)</h4><h5 id="Medium-1"><a href="#Medium-1" class="headerlink" title="Medium"></a>Medium</h5><p>EZ,每次乘数不足的时候就倍增乘数。</p>
+<p><a href="https://leetcode.com/problems/powx-n/" target="_blank" rel="noopener">050</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/050.cpp" target="_blank" rel="noopener">My Code</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/07/2020-10-07/" data-id="ckhuo1x7w008kwcuy9ka804gz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020-10-06" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/06/2020-10-06/" class="article-date">
+  <time datetime="2020-10-05T15:41:43.000Z" itemprop="datePublished">2020-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/06/2020-10-06/">2020-10-06</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>现在是半夜一点过，按照某些闭眼才算新一天的算法来说，其实现在还没到新的一天。</p>
+<p>其实昨天去学校的路上就觉得有点难过了，开始慢慢意识到自己拥有什么，自己是什么之后，一股无力感就涌了上来。</p>
+<p>我有的很少，也没有过人的才华或者外貌，家里也不富裕。</p>
+<p>不是抱怨啦，情况就是这么个情况。</p>
+<p>意识到这个情况并且发现了不接受不行的时候，还是会难过。</p>
+<p>所以也不明确昨天的心情低落几分是来自我自己，几分是来自坏消息。</p>
+<p>所以昨天其实是借着坏消息放纵自己。</p>
+<p>但是这样不行，现在这样的自己也找不到工作，也不会有人喜欢。</p>
+<p>有被突然认清的现实打击到了。</p>
+<p>在记录时间的软件上的生活的标签，时时在提醒我生活的大部分构成是无趣的。睡觉是生活一部分，打扫卫生是生活一部分，做饭吃也是生活一部分。</p>
+<p>其实是好事，这样下来对自己跟生活的认识又更加深入了。</p>
+<p>就是幻想破灭时候的阵痛有点难挨，不过阵痛之后就是新生活啦，好日子都是要自己去争取的！</p>
+<h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="46-Permutations"><a href="#46-Permutations" class="headerlink" title="46. Permutations"></a>46. Permutations</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>感觉这题好暴力啊。如果用交换两个元素的方式来遍历的话，有点不好做（是我不会。</p>
+<p>如果用迭代的话，要维护一个元素是否被使用的bitmap。</p>
+<p>这样的话算DFS？不过用BFS是不是好一点。噢，好像不是这样的。</p>
+<p>想了想还是有点难度噢，如果先填充位数的话，怎么指定填充的顺序呢。</p>
+<p>如果要一个一个的填充的话，也不知道怎么确定顺序。</p>
+<p>做成迭代的话，可以考虑从后往前填充，每次返回了子问题之后再填充当前的数字，这样可以开销少一点。</p>
+<p>迭代的话，是不是就需要多传一个参数。或者还是考虑一个全局的bitmap。</p>
+<p>但是迭代的每一层都要一个栈或者队列？用传递进来的vector遍历的话，每一次都要传递一个新的参数进来。</p>
+<p>还是bitmap吧。唉，bitmap这要写个新函数来保证初始化。</p>
+<p>做完啦，速度排在后5%。想了想是不是传参的锅。传进去的参数倒是变少了，但是return 每次都要回传一个二维数组。</p>
+<p>看了看答案，是交换两个元素的方式。有点不会，准备去看看中文题解。</p>
+<p>(046)[<a href="https://leetcode.com/problems/permutations/]" target="_blank" rel="noopener">https://leetcode.com/problems/permutations/]</a><br>(My Code)[<a href="https://github.com/maxioul/leetcode_practice/blob/master/046.cpp]" target="_blank" rel="noopener">https://github.com/maxioul/leetcode_practice/blob/master/046.cpp]</a></p>
+<p>中文题解写的不太行啊，感觉还是没有1%的代码那么精妙。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/06/2020-10-06/" data-id="ckhuo1x7s008awcuyfkp3b6sz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020-10-05" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/05/2020-10-05/" class="article-date">
+  <time datetime="2020-10-05T06:01:21.000Z" itemprop="datePublished">2020-10-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/05/2020-10-05/">2020-10-05</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>今天中午知道我好朋友父亲离世了。</p>
+<p>中午去研究室坐了两小时，跟两个同级的日本人一句话没说。</p>
+<p>觉得有点孤独吧，去罗森买了一个炸鸡两个布丁。</p>
+<p>吃完了，看到好朋友家里的猫猫也病重了。</p>
+<p>好难过啊。表弟最近在流片，也没啥时间。</p>
+<p>一个人好难受啊。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/05/2020-10-05/" data-id="ckhuo1x7m007vwcuy5op87p4z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020-10-04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/04/2020-10-04/" class="article-date">
+  <time datetime="2020-10-04T02:48:28.000Z" itemprop="datePublished">2020-10-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/04/2020-10-04/">2020-10-04</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><p>上午刷知乎看到一个人三月份开始刷leetcode， 现在已经500题了，而我现在才可怜的120道题。看来坚持真的很重要。</p>
+<p>我也要每天都刷题了。每天三道题吧。</p>
+<h4 id="29-Divide-Two-Integers"><a href="#29-Divide-Two-Integers" class="headerlink" title="29. Divide Two Integers"></a>29. Divide Two Integers</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>为啥这题只有16%的通过啊，我感觉看着挺简单的。</p>
+<p>想了想，直接除有个越界的条件，或许可以用INT_MAX和INT_MIN除以除数来判断被除数的大小范围，被除数超过了范围就输出越界。</p>
+<p>噢，原来是用INT_MAX来乘以被除数来定边界。</p>
+<p>噢，做错了，题目要求说只接受32位的运算环境。</p>
+<p>这咋办，要是想用这种办法来的话，可以试试用乘以2的次方来试探在不在范围内。</p>
+<p>先没收一下符号吧，好像没收不得，负数范围比正数大一。</p>
+<p>不过越界是不是只有INT_MIN除以-1这种情况。毕竟都是整数，越除只会越小。</p>
+<p>靠，还真是，一通操作猛如虎，结果就检测一种情况就可以了。</p>
+<p>不过为什么别人的答案全是位运算啊。</p>
+<p>噢，合着不能用除法啊。</p>
+<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊，又没有好好看题。</p>
+<p>看了答案之后有一个问题，为什么用了long int，INT_MIN就不会越界，C++的long int 不也是32位的吗。</p>
+<p>我觉得用unsigned int 也可以，果然可以。</p>
+<p><a href="https://leetcode.com/problems/divide-two-integers/" target="_blank" rel="noopener">029</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/029.cpp" target="_blank" rel="noopener">My Code</a></p>
+<h4 id="37-Sudoku-Solver"><a href="#37-Sudoku-Solver" class="headerlink" title="37. Sudoku Solver"></a>37. Sudoku Solver</h4><h5 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h5><p>我以前就在想写一个数独解答器，没想到啊，早就有人想到了。</p>
+<p>啊，这，我还以为会有什么条件限制或者hit，就硬解啊。</p>
+<p>暴力解法就不停的遍历没有答案的位置填空直到没有空可以填。</p>
+<p>但是数独不是有难一点的吗，感觉难一点的数独用这种方法会失败。</p>
+<p>先试试咯，这道题通过率居然有40%。</p>
+<p>暴力直接超时了。如果用DFS倒是可以得到所有的解吧，但是规模会不会太大了。假设有60个空位，就是60^9的计算量。</p>
+<p>试试DFS吧。</p>
+<p>居然错了，啊，这，答案是错的是我没想到的。</p>
+<p>没有把修改过的值修改回’.’，所以错了，修改了之后超时。</p>
+<p>发现是在栈空之后，理论上这个状态是错误的应该返回上一级，但是没有返回导致死循环。</p>
+<p>最后写出来挺慢的，看看别的答案吧。</p>
+<p><a href="https://leetcode.com/problems/sudoku-solver/" target="_blank" rel="noopener">037</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/037.cpp" target="_blank" rel="noopener">My Code</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/04/2020-10-04/" data-id="ckhuo1x7o0080wcuy1or49bko" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020-10-02" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/02/2020-10-02/" class="article-date">
+  <time datetime="2020-10-02T07:11:24.000Z" itemprop="datePublished">2020-10-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/02/2020-10-02/">2020-10-02</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>上午重新安排了记录时间的标签。感觉自己整挺好。</p>
+<p>标签叫生活，享受生活，还有一个定义自己。</p>
+<p>打算生活里面就放一些日常生活的记录，然后享受生活就平时摸鱼的时间，定义自己大概就练吉他，锻炼，还有看看书的时候吧，毕竟被人说了不够秀气，得锻炼起来了。</p>
+<p>一开始的生活标签是日常消耗，后来又觉得不太好改掉了，感觉语言确实是有力量的，如果我一直认为日常的生活是在消耗我的话，我心底就会确实开始讨厌生活，但是标签记录成生活的话，反而可以接受生活就是这么平淡的设定了。</p>
+<p>还有两个标签是修士学位和找工作，找工作是红色的，说明很紧急，然后修士学位是黄色的标签说明没那么紧急。</p>
+<p>嗨呀，我这个对己心理学真的强。</p>
+<h2 id="今日观影"><a href="#今日观影" class="headerlink" title="今日观影"></a>今日观影</h2><p><a href="https://movie.douban.com/subject/27662541/" target="_blank" rel="noopener">Enola Holmes</a></p>
+<p>挺一般的，谜题也一般，想表达的东西也可以一眼看穿。</p>
+<p>而且感觉也没有很好的表达出来。</p>
+<p>不过Netflix 拍的嘛，感觉水平真的是要差一点的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/02/2020-10-02/" data-id="ckhuo1x7n007ywcuy2l3qlso9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/今日观影/">今日观影</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020-10-01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/01/2020-10-01/" class="article-date">
+  <time datetime="2020-10-01T03:50:36.000Z" itemprop="datePublished">2020-10-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/01/2020-10-01/">2020-10-01</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="24-Swap-Nodes-in-Pairs"><a href="#24-Swap-Nodes-in-Pairs" class="headerlink" title="24. Swap Nodes in Pairs"></a>24. Swap Nodes in Pairs</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>用迭代吧，只需要处理0个一个两个的情况。</p>
+<p><a href="https://leetcode.com/problems/swap-nodes-in-pairs/" target="_blank" rel="noopener">024</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/024.cpp" target="_blank" rel="noopener">My Code</a></p>
+<h4 id="25-Reverse-Nodes-in-k-Group"><a href="#25-Reverse-Nodes-in-k-Group" class="headerlink" title="25. Reverse Nodes in k-Group"></a>25. Reverse Nodes in k-Group</h4><h5 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h5><p>双指针然后翻转咯。</p>
+<p>对指针的操作还是有点不熟练，循环内temp 那里一开始赋的now的值，然后在now赋值的时候取next，这个时候temp的值已经随着now改变了，但是我并没有察觉。</p>
+<p>(025)[<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/]" target="_blank" rel="noopener">https://leetcode.com/problems/reverse-nodes-in-k-group/]</a><br>(My Code)[<a href="https://github.com/maxioul/leetcode_practice/blob/master/025.cpp]" target="_blank" rel="noopener">https://github.com/maxioul/leetcode_practice/blob/master/025.cpp]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/01/2020-10-01/" data-id="ckhuo1x7p0082wcuycncwjt7o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020-09-30" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/30/2020-09-30/" class="article-date">
+  <time datetime="2020-09-29T23:51:39.000Z" itemprop="datePublished">2020-09-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/30/2020-09-30/">2020-09-30</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="9-Palindrome-Number"><a href="#9-Palindrome-Number" class="headerlink" title="9. Palindrome Number"></a>9. Palindrome Number</h4><h5 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h5><p>按着顺序看一遍前面还有那些没做的，结束了之后开始看看CS 97SI。</p>
+<p>判断int 是否回文，有int to string 的函数吗</p>
+<p>好耶！c++11伟大。</p>
+<p>(009)[<a href="https://leetcode.com/problems/palindrome-number/submissions/]" target="_blank" rel="noopener">https://leetcode.com/problems/palindrome-number/submissions/]</a><br>(My Code)[<a href="https://github.com/maxioul/leetcode_practice/blob/master/009.cpp]" target="_blank" rel="noopener">https://github.com/maxioul/leetcode_practice/blob/master/009.cpp]</a></p>
+<h4 id="19-Remove-Nth-Node-From-End-of-List"><a href="#19-Remove-Nth-Node-From-End-of-List" class="headerlink" title="19. Remove Nth Node From End of List"></a>19. Remove Nth Node From End of List</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>Double pointers, EZ.</p>
+<p>啊啊啊啊啊，指针好难。</p>
+<p>一开始忽视了head 节点自己被除掉的边界情况。</p>
+<p>(019)[<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/]" target="_blank" rel="noopener">https://leetcode.com/problems/remove-nth-node-from-end-of-list/]</a><br>(My Code)[<a href="https://github.com/maxioul/leetcode_practice/blob/master/019.cpp]" target="_blank" rel="noopener">https://github.com/maxioul/leetcode_practice/blob/master/019.cpp]</a></p>
+<h4 id="21-Merge-Two-Sorted-Lists"><a href="#21-Merge-Two-Sorted-Lists" class="headerlink" title="21. Merge Two Sorted Lists"></a>21. Merge Two Sorted Lists</h4><h5 id="Easy-1"><a href="#Easy-1" class="headerlink" title="Easy"></a>Easy</h5><p>把两个有序列表合并，感觉可以在一个列表上加另一个列表，不需要创建新列表。</p>
+<p>搞定了，有点trick 的地方是要保存被插入列表的两个相邻节点，因为只会有从被抛弃列表往被插入列表的插入。</p>
+<p>(021)[<a href="https://leetcode.com/problems/merge-two-sorted-lists/]" target="_blank" rel="noopener">https://leetcode.com/problems/merge-two-sorted-lists/]</a><br>(My Code)[<a href="https://github.com/maxioul/leetcode_practice/blob/master/021.cpp]" target="_blank" rel="noopener">https://github.com/maxioul/leetcode_practice/blob/master/021.cpp]</a></p>
+<h4 id="23-Merge-k-Sorted-Lists"><a href="#23-Merge-k-Sorted-Lists" class="headerlink" title="23. Merge k Sorted Lists"></a>23. Merge k Sorted Lists</h4><h5 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h5><p>把多个有序列表合并，好像还是可以用刚刚一样的方法，就是判断最小值的时候会麻烦一点？</p>
+<p>vector 的移除操作是O(N)，好烦啊，想直接把空指针从vector 里面移除掉，就感觉这操作开销太大。</p>
+<p>不如交换变成空的节点与最后一个有值的节点，保存当前有值的节点数目，然后每一次比较的小循环也可以小一点。</p>
+<p>之前打算每选出一个最小节点之后就做一次最小值对比，后来想想每次有n个值要对比，但是新出现的值只有一个，每次都要O(N),开销太大。</p>
+<p>这个时候用最小堆是最好的，可是我懒得写。</p>
+<p>不过最小堆就不用担心空指针的问题了，啊啊啊啊啊啊。</p>
+<p>好耶，c++ STL 有heap。</p>
+<p>哇，仔细一看这个题好妙啊，vector 里面放list ，vector 就像是好几个滑动窗口在list 上滑动。我甚至可以直接在这个vector上面实现一个heap。</p>
+<p>但是为什么要给自己找事儿呢。</p>
+<p>STL 的堆实现只是算法，不是实体的数据结构。不过倒是显得vector 更加好用了。妙啊。</p>
+<p><a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank" rel="noopener">023</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/023.cpp" target="_blank" rel="noopener">My Code</a></p>
+<h2 id="今日观影"><a href="#今日观影" class="headerlink" title="今日观影"></a>今日观影</h2><p><a href="https://movie.douban.com/subject/30179560/" target="_blank" rel="noopener">劇場版 ヴァイオレット・エヴァーガーデン</a></p>
+<h5 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h5><p>紫罗兰TV版刚上映的时候，正是毕业前夕，我人还在湖畔宿舍的二楼。被寻找爱的slogan 吸引所以十分期待TV版。</p>
+<p>不过毕竟是毕业前夕的春夏，一边忙着糊弄论文，一边跟朋友们告别。</p>
+<p>一开始我等着动画给一个爱的定义。后来别人笃定的告诉我爱就是共情，后来看着主角一点点开始理解别人的心情，自己也相信了爱大概就是共情。</p>
+<p>不过之后自己又执着于共情这个答案咯，犯了很多错。</p>
+<p>虽然没有了从电影里面寻找答案的心情，抱着想看看薇尔莉特有没有找到她自己的答案，两年后的我在二子玉川准备一个人进电影院。</p>
+<h5 id="看完啦"><a href="#看完啦" class="headerlink" title="看完啦"></a>看完啦</h5><p>哇，暴风哭泣，虽然少佐有点弱智。</p>
+<p>但是薇尔莉特终于还是知道了什么是爱。从什么都不知道的工具人到能和别人共情，理解复杂的情感并且用语句表达出来。</p>
+<p>我觉得使用文字真的是一项很关键的技能，因为人和人的沟通大部分靠语言，身体语言当然也很重要，但是互联网越来越发达，大家只在网上有文字沟通的时候越来越多了，掌握自己的文字变的越来越重要。</p>
+<p>说回电影，画面依旧一流，没看TV的话可能会比较难懂。</p>
+<p>以后说不定会找时间把TV跟电影连起来看一遍。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/09/30/2020-09-30/" data-id="ckhuo1x7m007twcuy9mckxg9w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/今日观影/">今日观影</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020-09-29" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/29/2020-09-29/" class="article-date">
+  <time datetime="2020-09-29T01:02:37.000Z" itemprop="datePublished">2020-09-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/29/2020-09-29/">2020-09-29</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="7-Reverse-Integer"><a href="#7-Reverse-Integer" class="headerlink" title="7. Reverse Integer"></a>7. Reverse Integer</h4><h5 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h5><p>上午要去帮忙搬家，做做Easy。</p>
+<p>把能踩的坑都写出来了啊，一边求余一边乘上去就可以了。</p>
+<p>还有一种情况，当int 取最大值的时候，翻转之后int 会越界，要用long long 来重新装一遍。</p>
+<p>不对啊，这返回值又是个int，看来是不会越界。</p>
+<p>我用了int 之后又报了越界的错，为什么。</p>
+<p>噢，下面写了越界要返回0。</p>
+<p><a href="https://leetcode.com/problems/reverse-integer/" target="_blank" rel="noopener">007</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/007.cpp" target="_blank" rel="noopener">My Code</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/09/29/2020-09-29/" data-id="ckhuo1x7k007owcuyx8h8fit3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Year-Awards-of-2020" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/27/Year-Awards-of-2020/" class="article-date">
@@ -95,415 +569,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/27/Year-Awards-of-2020/" data-id="ckgkmommc007i1ouywn8odnye" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/27/Year-Awards-of-2020/" data-id="ckhuo1x8q00c7wcuy548cpwh2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Year-Awards/">Year Awards</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-09-27" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/27/2020-09-27/" class="article-date">
-  <time datetime="2020-09-27T01:57:56.000Z" itemprop="datePublished">2020-09-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/27/2020-09-27/">2020-09-27</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="151-Reverse-Words-in-a-String"><a href="#151-Reverse-Words-in-a-String" class="headerlink" title="151. Reverse Words in a String"></a>151. Reverse Words in a String</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>一开始想的是从后往前。</p>
-<p>后来发现好难写，应该是我菜吧，还是用了栈从前往后。</p>
-<p><a href="https://leetcode.com/problems/reverse-words-in-a-string/" target="_blank" rel="noopener">151</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/151.cpp" target="_blank" rel="noopener">My Code</a></p>
-<p>昨晚的比赛很不理想，先是并查集一个小地方写错卡了好久。</p>
-<p>好像上周的周赛也是这样，在一个小地方卡了很久。</p>
-<p>其实从后往前写也不难，就是自己抽象能力不太够，然后对数组的边界处理能力太差了。</p>
-<h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>前几天看了那个有关“哥，咱家有钱了的”梗，当时觉得妹妹很惨，这男的太没用了。</p>
-<p>之后的讨论里有人扒出来这个图是P的啥的，当时自己很不以为然，还有些愤概，觉得妹妹都那么惨了。</p>
-<p>结果今天看到全是男主编的，惊觉自己的情绪怎么这么好被操控。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/27/2020-09-27/" data-id="ckgkmomm5006z1ouyodoi1fuu" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-09-25" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/25/2020-09-25/" class="article-date">
-  <time datetime="2020-09-25T02:07:45.000Z" itemprop="datePublished">2020-09-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/25/2020-09-25/">2020-09-25</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="115-Distinct-Subsequences"><a href="#115-Distinct-Subsequences" class="headerlink" title="115. Distinct Subsequences"></a>115. Distinct Subsequences</h4><h5 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h5><p>一开始想到的是两个string 各放一个指针。然后用stack 存一下S的字符串位置。</p>
-<p>那么可不可以DP呢。DP好像子问题找不到的样子，看来是stack 了。先试试看会不会超时吧。</p>
-<p>要用递归吗，string 创建跟函数调用肯定会花费更多时间，感觉必超时。（不过递归真的好写</p>
-<p>试试用int 当成传参，肯定比string 快。</p>
-<p>递归果然超时了。看来要把隐式的函数调用栈写成显式的。</p>
-<p>第一遍的代码先扫描t的第一个字符，符合后才进栈开始计算，这样导致t的长度为1的时候不会加上去。</p>
-<p>好家伙，还是超时了，看来是方法有问题。</p>
-<p>要不还是DP填表？</p>
-<p>虽然没弄懂怎么回事，先把填表的规则想出来了，然后根据规则倒推子问题。</p>
-<p>一开始觉得DP的子问题找不到是因为想成了t削减一个元素的同时s也要削减对应的问题规模，但是实际上t跟s的问题削减是不相关的。这样子问题的解释也有了。</p>
-<p><a href="https://leetcode.com/problems/distinct-subsequences/" target="_blank" rel="noopener">115</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/115.cpp" target="_blank" rel="noopener">my code</a></p>
-<p>花了一个半小时写这道题，这合理吗。</p>
-<p>看了看跑的比我快的代码，真的好简洁啊。啥时候我才能写出那样的代码呢。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/25/2020-09-25/" data-id="ckgkmomm800781ouyx959jh2k" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-09-24" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/24/2020-09-24/" class="article-date">
-  <time datetime="2020-09-24T04:59:43.000Z" itemprop="datePublished">2020-09-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/24/2020-09-24/">2020-09-24</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="097-Interleaving-String"><a href="#097-Interleaving-String" class="headerlink" title="097. Interleaving String"></a>097. Interleaving String</h4><h5 id="Hard"><a href="#Hard" class="headerlink" title="Hard"></a>Hard</h5><p>第一反应肯定是DP啦，然后就不会写了，写出来的式子有点迷，写成了递归的式子。最大长度是200，感觉递归会超时。</p>
-<p>我悟了！DP的表的一条边是s3的长度，另一条边是s1，这样最后是一个梯形。</p>
-<p>然后发现数组的初始化不能用变量，最后简单粗暴200*100了。</p>
-<p>角标处理好麻烦，感觉自己又要写错。（已经写错了</p>
-<p>没想到还有s1 加s2 的长度不等于s3 的情况，要是不给样例我估计要写疯。</p>
-<p><a href="https://leetcode.com/problems/interleaving-string/submissions/" target="_blank" rel="noopener">097</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/097.cpp" target="_blank" rel="noopener">my code</a></p>
-<p>然后看了看别人的代码，发现自己的DP表画错了，应该是一条边是s1 一条边是s2 的。（我真的好菜</p>
-<h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>前几天跟表弟去海里游泳的时候，我们一起往海里的一个柱子游过去。突然海水变成了黑色，大概是下面的基岩是黑色吧。</p>
-<p>当时恐惧感一下就上来了，想到各种深海的怪物啥的。有点犹豫要不要往回游的时候，突然想到不也挺好吗，然后就往前冲了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/24/2020-09-24/" data-id="ckgkmomm3006u1ouyoppz1m90" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-09-23" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/23/2020-09-23/" class="article-date">
-  <time datetime="2020-09-23T08:30:41.000Z" itemprop="datePublished">2020-09-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/23/2020-09-23/">2020-09-23</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><h4 id="093-Resrore-IP-Addresses"><a href="#093-Resrore-IP-Addresses" class="headerlink" title="093 Resrore IP Addresses"></a>093 Resrore IP Addresses</h4><h5 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h5><p>IP 地址有四段，每一段都可以从0~255，一共需要放三个点在string 中，检测每一段是不是合法的代码应该可以复用，考虑写成函数。</p>
-<p>解题挺顺利，遇到了两个边际问题没有考虑到，一个是数字不可以0开头，第二个是太长越界，通过Test 函数里面加了两个判断解决。</p>
-<p><a href="https://leetcode.com/problems/restore-ip-addresses/" target="_blank" rel="noopener">093</a><br><a href="https://github.com/maxioul/leetcode_practice/blob/master/093.cpp" target="_blank" rel="noopener">My code</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/23/2020-09-23/" data-id="ckgkmomm800761ouyl9a12ztm" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题记录/">刷题记录</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-09-05" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/05/2020-09-05/" class="article-date">
-  <time datetime="2020-09-05T08:29:32.000Z" itemprop="datePublished">2020-09-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/05/2020-09-05/">2020-09-05</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>今天体验到了什么叫来自朋友的压力，买了个琴在群里抱怨了两句按格子太痛，被皮卡追着问我要学啥。。。。压力太大了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/05/2020-09-05/" data-id="ckgkmomm600711ouy4tf99hkh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-08-20" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/21/2020-08-20/" class="article-date">
-  <time datetime="2020-08-20T16:49:12.000Z" itemprop="datePublished">2020-08-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/21/2020-08-20/">2020-08-20</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><h4 id="五件感谢的事情"><a href="#五件感谢的事情" class="headerlink" title="五件感谢的事情"></a>五件感谢的事情</h4><ol>
-<li>谢谢工会的人陪我玩儿游戏</li>
-<li>谢谢Tal教授</li>
-<li>谢谢老板，没喷我。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/21/2020-08-20/" data-id="ckgkmomm1006q1ouyw5f8apl7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-08-19" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/19/2020-08-19/" class="article-date">
-  <time datetime="2020-08-19T14:10:15.000Z" itemprop="datePublished">2020-08-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/19/2020-08-19/">2020-08-19</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>今天东工收到了爆破预告，下周一都紧急停课了。</p>
-<p>晚上炸东西的时候忘了先拿出来解冻，一点都不好吃，明天试试解冻之后什么样子。</p>
-<p>网站还在筹备中，今天看了太多的小说了。</p>
-<p>想想也许可以编个MC的mod 来当作游戏的side project，又或者说放弃游戏公司这条路，还没有想好。</p>
-<h4 id="五件感谢的事情"><a href="#五件感谢的事情" class="headerlink" title="五件感谢的事情"></a>五件感谢的事情</h4><ol>
-<li>谢谢怪物猎人，真好玩儿。</li>
-<li>谢谢写小说的，挺好看的。</li>
-<li>今天OK store 的收银员好热情啊。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/19/2020-08-19/" data-id="ckgkmomlz006k1ouyx5bqodoc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-08-17" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/17/2020-08-17/" class="article-date">
-  <time datetime="2020-08-17T14:34:20.000Z" itemprop="datePublished">2020-08-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/17/2020-08-17/">2020-08-17</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>这一赛季的LOL比赛告一段落了，IG输的好惨。看看Faker　今年能走多远吧。</p>
-<h4 id="五件感谢的事情"><a href="#五件感谢的事情" class="headerlink" title="五件感谢的事情"></a>五件感谢的事情</h4><ol>
-<li>不得不说，跟ff14 的朋友们聊天真的很轻松。谢谢他们，虽然我没时间再去玩儿这个游戏了。</li>
-<li>怪猎也好玩儿，特别是打败了很强的怪物的时候。感谢制作组把这么好玩儿的游戏带到了这里。</li>
-<li>最近又在刷一遍Tal 教授的积极心理学，感觉又有新收获，又或者说之前看第一遍的时候有遗漏，感谢教授带来的课程吧，今天看视频的时候经常会想，如果大学的自己看到的话，真的会有很多不一样的事情发生，所以这一次一定要坚持下去啊。</li>
-<li>谢谢便利店，买到了想喝的饮料。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/17/2020-08-17/" data-id="ckgkmomm2006s1ouyf9v39811" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2020-08-14" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/15/2020-08-14/" class="article-date">
-  <time datetime="2020-08-14T16:10:30.000Z" itemprop="datePublished">2020-08-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/15/2020-08-14/">2020-08-14</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><p>下周得去学校了</p>
-<h4 id="五件感谢的事情"><a href="#五件感谢的事情" class="headerlink" title="五件感谢的事情"></a>五件感谢的事情</h4><ol>
-<li>谢谢Tal 教授</li>
-<li>谢谢卡普空，怪物猎人真好玩儿</li>
-<li>谢谢东急，吃的好吃</li>
-<li>谢谢我妈给我打钱</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/15/2020-08-14/" data-id="ckgkmomly006i1ouyphe67azn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020/">2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
 
     </footer>
   </div>
@@ -516,7 +585,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -540,7 +609,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/2018/" style="font-size: 19px;">2018</a> <a href="/tags/2019/" style="font-size: 16px;">2019</a> <a href="/tags/2020/" style="font-size: 18px;">2020</a> <a href="/tags/Proust-Questionnaire/" style="font-size: 10px;">Proust Questionnaire</a> <a href="/tags/TOEFL/" style="font-size: 12px;">TOEFL</a> <a href="/tags/Year-Awards/" style="font-size: 11px;">Year Awards</a> <a href="/tags/“风云千樯”/" style="font-size: 10px;">“风云千樯”</a> <a href="/tags/今天的游戏/" style="font-size: 11px;">今天的游戏</a> <a href="/tags/今日看片/" style="font-size: 13px;">今日看片</a> <a href="/tags/今日观影/" style="font-size: 15px;">今日观影</a> <a href="/tags/刷题记录/" style="font-size: 14px;">刷题记录</a> <a href="/tags/奇思妙想/" style="font-size: 10px;">奇思妙想</a> <a href="/tags/开卷有益/" style="font-size: 11px;">开卷有益</a> <a href="/tags/日记/" style="font-size: 20px;">日记</a> <a href="/tags/未来规划/" style="font-size: 10px;">未来规划</a> <a href="/tags/杂记/" style="font-size: 17px;">杂记</a> <a href="/tags/猛男落泪/" style="font-size: 10px;">猛男落泪</a>
+      <a href="/tags/2018/" style="font-size: 18px;">2018</a> <a href="/tags/2019/" style="font-size: 16px;">2019</a> <a href="/tags/2020/" style="font-size: 19px;">2020</a> <a href="/tags/Proust-Questionnaire/" style="font-size: 10px;">Proust Questionnaire</a> <a href="/tags/TOEFL/" style="font-size: 12px;">TOEFL</a> <a href="/tags/Year-Awards/" style="font-size: 11px;">Year Awards</a> <a href="/tags/“风云千樯”/" style="font-size: 10px;">“风云千樯”</a> <a href="/tags/今天的游戏/" style="font-size: 11px;">今天的游戏</a> <a href="/tags/今日看片/" style="font-size: 13px;">今日看片</a> <a href="/tags/今日观影/" style="font-size: 15px;">今日观影</a> <a href="/tags/刷题记录/" style="font-size: 14px;">刷题记录</a> <a href="/tags/奇思妙想/" style="font-size: 10px;">奇思妙想</a> <a href="/tags/开卷有益/" style="font-size: 11px;">开卷有益</a> <a href="/tags/日记/" style="font-size: 20px;">日记</a> <a href="/tags/未来规划/" style="font-size: 10px;">未来规划</a> <a href="/tags/杂记/" style="font-size: 17px;">杂记</a> <a href="/tags/猛男落泪/" style="font-size: 10px;">猛男落泪</a>
     </div>
   </div>
 
@@ -549,7 +618,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li></ul>
     </div>
   </div>
 
@@ -562,23 +631,23 @@
       <ul>
         
           <li>
-            <a href="/2020/10/22/2020-10-22/">2020-10-22</a>
+            <a href="/2020/11/23/2020-11-23/">2020-11-23</a>
           </li>
         
           <li>
-            <a href="/2020/10/10/2020-10-10/">2020-10-10</a>
+            <a href="/2020/11/22/2020-11-22/">2020-11-22</a>
           </li>
         
           <li>
-            <a href="/2020/10/07/2020-10-07/">2020-10-07</a>
+            <a href="/2020/11/16/2020-11-16/">2020-11-16</a>
           </li>
         
           <li>
-            <a href="/2020/10/06/2020-10-06/">2020-10-06</a>
+            <a href="/2020/11/12/2020-11-12/">2020-11-12</a>
           </li>
         
           <li>
-            <a href="/2020/10/05/2020-10-05/">2020-10-05</a>
+            <a href="/2020/11/10/2020-11-10/">2020-11-10</a>
           </li>
         
       </ul>
